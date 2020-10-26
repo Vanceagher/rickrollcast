@@ -1,0 +1,87 @@
+* {
+  user-select: none;
+}
+#pause {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+#resume {
+  margin-bottom: 20px;
+}
+p {
+  opacity: 0;
+}
+h1 {
+  font-family: "Nunito", sans-serif;
+  color: #1c1c28;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 40px;
+}
+img {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button {
+  font-family: "Nunito", sans-serif;
+  background: #1c1c28;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 40px;
+  transition: 0.2s;
+  width: 400px;
+}
+button:hover {
+  cursor: pointer;
+  background: #3b3c50;
+}
+button:focus {
+  outline: none;
+}
+.slidecontainer {
+  width: 99%;
+}
+.slider {
+  margin-top: 40px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 75px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 6px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 75px;
+  height: 75px;
+  background: #1c1c28;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  background: #4caf50;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
