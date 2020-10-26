@@ -135,7 +135,7 @@ var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
 var volumeraw = slider.value
-var volume = Math.round(10*volumeraw)/10;
+var volume = Math.round(100*volumeraw)/100;
   
 output.innerHTML = volume;
         
@@ -143,7 +143,7 @@ const cjs = new Castjs();
   
   cjs.volume(volume);
   
-  }, 100);
+  }, 0);
 
 document.getElementById("pause").addEventListener("click", function() {
   cjs.pause();
