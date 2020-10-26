@@ -20,7 +20,59 @@
       <button id="spare" onclick="Function()">😵 KILL RICK</button>
    </div>
    <style>
-      }
+      * {
+  user-select: none;
+}
+#pause {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+#resume {
+  margin-bottom: 20px;
+}
+p {
+  opacity: 0;
+}
+h1 {
+  font-family: "Nunito", sans-serif;
+  color: #1c1c28;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 40px;
+}
+img {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button {
+  font-family: "Nunito", sans-serif;
+  background: #1c1c28;
+  padding: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 40px;
+  transition: 0.2s;
+  width: 400px;
+}
+button:hover {
+  cursor: pointer;
+  background: #3b3c50;
+}
+button:focus {
+  outline: none;
+}
 .slidecontainer {
   width: 99%;
 }
@@ -55,6 +107,7 @@
 .slider::-webkit-slider-thumb:hover {
   transform: scale(1.1);
 }
+
    </style>
    <script>
 // Create new Castjs instance
