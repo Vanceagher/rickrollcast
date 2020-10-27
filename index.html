@@ -1,82 +1,78 @@
 <html>
-  <head>
-  <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/Vanceagher/rickrollcast/main/favicon.ico"/>
-  <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=.85">
-    <script src="https://castjs.io/cast.min.js"></script></head>
-  <title>Rickroll Cast</title>
-
-  <div class="center">
-    <button id="cast">📢 RICKROLL 'EM</button>
-
-    <div class="slidecontainer">
-      <input type="range" min="0" step="0.001" max="1" value=".2" class="slider" id="myRange">
-      <h1>VOLUME</h1>
-      <p>Value: <span id="demo"></span></p>
-    </div>
-    <button id="pause">🤐 GAG RICK</button>
-    <br>
-    <button id="resume">😀 UNGAG RICK</button>
-    <br>
-    <button id="spare">😵 KILL RICK</button>
-
-  </div>
-  <script>
-// Create new Castjs instance
-const cjs = new Castjs();
-
-// Wait for user interaction
-document.getElementById('cast').addEventListener('click', function() {
-    // Check if casting is available
-    if (cjs.available) {   
-        // Initiate new cast session    
-      var metadata = {
-  title:       'Get Rickrolled!',
-  description: "It's actually a pretty good song."
-      }
-        cjs.cast('https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4', metadata);
+   <head>
+      <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/Vanceagher/rickrollcast/main/favicon.ico"/>
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=.85">
+      <script src="https://castjs.io/cast.min.js"></script>
+   </head>
+   <title>Rickroll Cast</title>
+   <div class="center">
+      <button id="cast">📢 RICKROLL 'EM</button>
+      <div class="slidecontainer">
+         <input type="range" min="0" step="0.001" max="1" value=".2" class="slider" id="myRange">
+         <h1>VOLUME</h1>
+         <p>Value: <span id="demo"></span></p>
+      </div>
+      <button id="pause">🤐 GAG RICK</button>
+      <br>
+      <button id="resume">😀 UNGAG RICK</button>
+      <br>
+      <button id="spare">😵 KILL RICK</button>
+   </div>
+   <script>
+      // Create new Castjs instance
+      const cjs = new Castjs();
       
-    }
-  
-});  
-
-setInterval(function(){
-  
-  var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-var volumeraw = slider.value
-var volumeslide = Math.round(100*volumeraw)/100;
-  
-output.innerHTML = volumeslide;
+      // Wait for user interaction
+      document.getElementById('cast').addEventListener('click', function() {
+          // Check if casting is available
+          if (cjs.available) {   
+              // Initiate new cast session    
+            var metadata = {
+        title:       'Get Rickrolled!',
+        description: "It's actually a pretty good song."
+            }
+              cjs.cast('https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4', metadata);
+            
+          }
         
-const cjs = new Castjs();
-  
-  cjs.volume(volumeslide);
-  
-  }, 100);
-
-document.getElementById("pause").addEventListener("click", function() {
-  cjs.pause();
-});
-
-document.getElementById("resume").addEventListener("click", function() {
-  cjs.play();
-});
-
-document.getElementById("spare").addEventListener("click", function() {
-  cjs.disconnect();
-  document.getElementById("spare").style.background = "#ba344d";
-  document.getElementById("spare").style.color = "#1c1c28";
-  
-  setTimeout(function(){
-  document.getElementById("spare").style.background = "#1c1c28";
-  document.getElementById("spare").style.color = "#fff";
-    }, 3000);
-});
-
-
+      });  
+      
+      setInterval(function(){
+        
+        var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      
+      var volumeraw = slider.value
+      var volumeslide = Math.round(100*volumeraw)/100;
+        
+      output.innerHTML = volumeslide;
+              
+      const cjs = new Castjs();
+        
+        cjs.volume(volumeslide);
+        
+        }, 100);
+      
+      document.getElementById("pause").addEventListener("click", function() {
+        cjs.pause();
+      });
+      
+      document.getElementById("resume").addEventListener("click", function() {
+        cjs.play();
+      });
+      
+      document.getElementById("spare").addEventListener("click", function() {
+        cjs.disconnect();
+        document.getElementById("spare").style.background = "#ba344d";
+        document.getElementById("spare").style.color = "#1c1c28";
+        
+        setTimeout(function(){
+        document.getElementById("spare").style.background = "#1c1c28";
+        document.getElementById("spare").style.color = "#fff";
+          }, 3000);
+      });
   </script>
 </html>
