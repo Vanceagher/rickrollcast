@@ -32,7 +32,7 @@
     <button id="cast">📢 RICKROLL 'EM</button>
 
     <div class="slidecontainer">
-      <input type="range" min="0" step="0.001" max="1" value=".2" class="slider" id="myRange">
+      <input type="range" min="0" step="0.001" max="1" value=".1" class="slider" id="myRange">
       <h1>VOLUME</h1>
       <p>Value: <span id="demo"></span></p>
     </div>
@@ -58,7 +58,7 @@ document.getElementById('cast').addEventListener('click', function() {
   description: "It's actually a pretty good song."
       }
         cjs.cast('https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4', metadata);
-      
+      cjs.volume(0.2);
     }
   
 });  
