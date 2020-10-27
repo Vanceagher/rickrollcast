@@ -22,61 +22,63 @@
    </div>
    <script>
       // Create new Castjs instance
-      const cjs = new Castjs();
+const cjs = new Castjs();
+
+// Wait for user interaction
+document.getElementById('cast').addEventListener('click', function() {
+  navigator.vibrate([5]);
+    // Check if casting is available
+    if (cjs.available) {   
+        // Initiate new cast session    
+      var metadata = {
+  title:       'Get Rickrolled!',
+  description: "It's actually a pretty good song."
+      }
+        cjs.cast('https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4', metadata);
       
-      // Wait for user interaction
-      document.getElementById('cast').addEventListener('click', function() {
-navigator.vibrate([5]);
-          // Check if casting is available
-          if (cjs.available) {   
-              // Initiate new cast session    
-            var metadata = {
-        title:       'Get Rickrolled!',
-        description: "It's actually a pretty good song."
-            }
-              cjs.cast('https://archive.org/download/Rick_Astley_Never_Gonna_Give_You_Up/Rick_Astley_Never_Gonna_Give_You_Up.mp4', metadata);
-            
-          }
+    }
+  
+});  
+
+setInterval(function(){
+  
+  var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+var volumeraw = slider.value
+var volumeslide = Math.round(100*volumeraw)/100;
+  
+output.innerHTML = volumeslide;
         
-      });  
-      
-      setInterval(function(){
-        
-        var slider = document.getElementById("myRange");
-      var output = document.getElementById("demo");
-      output.innerHTML = slider.value;
-      
-      var volumeraw = slider.value
-      var volumeslide = Math.round(100*volumeraw)/100;
-        
-      output.innerHTML = volumeslide;
-              
-      const cjs = new Castjs();
-        
-        cjs.volume(volumeslide);
-        
-        }, 100);
-      
-      document.getElementById("pause").addEventListener("click", function() {
-        cjs.pause();
-navigator.vibrate([5]);
-      });
-      
-      document.getElementById("resume").addEventListener("click", function() {
-        cjs.play();
-navigator.vibrate([5]);
-      });
-      
-      document.getElementById("spare").addEventListener("click", function() {
-navigator.vibrate([5]);
-        cjs.disconnect();
-        document.getElementById("spare").style.background = "#ba344d";
-        document.getElementById("spare").style.color = "#1c1c28";
-        
-        setTimeout(function(){
-        document.getElementById("spare").style.background = "#1c1c28";
-        document.getElementById("spare").style.color = "#fff";
-          }, 3000);
-      });
+const cjs = new Castjs();
+  
+  cjs.volume(volumeslide);
+  
+  }, 100);
+
+document.getElementById("pause").addEventListener("click", function() {
+  cjs.pause();
+  navigator.vibrate([5]);
+});
+
+document.getElementById("resume").addEventListener("click", function() {
+  cjs.play();
+  navigator.vibrate([5]);
+});
+
+document.getElementById("spare").addEventListener("click", function() {
+  navigator.vibrate([5]);
+  cjs.disconnect();
+  document.getElementById("spare").style.background = "#ba344d";
+  document.getElementById("spare").style.color = "#1c1c28";
+  
+  setTimeout(function(){
+  document.getElementById("spare").style.background = "#1c1c28";
+  document.getElementById("spare").style.color = "#fff";
+    }, 3000);
+});
+
+
   </script>
 </html>
