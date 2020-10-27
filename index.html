@@ -26,6 +26,7 @@
       
       // Wait for user interaction
       document.getElementById('cast').addEventListener('click', function() {
+navigator.vibrate([5]);
           // Check if casting is available
           if (cjs.available) {   
               // Initiate new cast session    
@@ -58,13 +59,16 @@
       
       document.getElementById("pause").addEventListener("click", function() {
         cjs.pause();
+navigator.vibrate([5]);
       });
       
       document.getElementById("resume").addEventListener("click", function() {
         cjs.play();
+navigator.vibrate([5]);
       });
       
       document.getElementById("spare").addEventListener("click", function() {
+navigator.vibrate([5]);
         cjs.disconnect();
         document.getElementById("spare").style.background = "#ba344d";
         document.getElementById("spare").style.color = "#1c1c28";
