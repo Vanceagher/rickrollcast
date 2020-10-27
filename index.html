@@ -1,25 +1,48 @@
 <html>
-   <head>
-      <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/Vanceagher/rickrollcast/main/favicon.ico"/>
-      <link rel="stylesheet" href="styles.css">
-      <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-      <meta name="viewport" content="width=device-width, initial-scale=.85">
-      <script src="https://castjs.io/cast.min.js"></script>
-   </head>
-   <title>Rickroll Cast</title>
-   <div class="center">
-      <button id="cast">📢 RICKROLL 'EM</button>
-      <div class="slidecontainer">
-         <input type="range" min="0" step="0.001" max="1" value=".2" class="slider" id="myRange">
-         <h1>VOLUME</h1>
-         <p>Value: <span id="demo"></span></p>
-      </div>
-      <button id="pause">🤐 GAG RICK</button>
-      <br>
-      <button id="resume">😀 UNGAG RICK</button>
-      <br>
-      <button id="spare">😵 KILL RICK</button>
-   </div>
+  <head>
+    
+    <!-- Primary Meta Tags -->
+<title>Rickroll Cast</title>
+<meta name="title" content="Rickroll Cast - Prank the whole house">
+<meta name="description" content="Rickroll any Google Cast enabled device, or even every device on your Wi-Fi.">
+<meta name="viewport" content="width=device-width, initial-scale=.85">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vanceagher.github.io/rickrollcast">
+<meta property="og:title" content="Rickroll Cast - Prank the whole house">
+<meta property="og:description" content="Rickroll any Google Cast enabled device, or even every device on your Wi-Fi.">
+<meta property="og:image" content="https://github.com/Vanceagher/rickrollcast/blob/main/logo.jpg?raw=true">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://vanceagher.github.io/rickrollcast">
+<meta property="twitter:title" content="Rickroll Cast - Prank the whole house">
+<meta property="twitter:description" content="Rickroll any Google Cast enabled device, or even every device on your Wi-Fi.">
+<meta property="twitter:image" content="https://github.com/Vanceagher/rickrollcast/blob/main/logo.jpg?raw=true">
+    
+<link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/Vanceagher/rickrollcast/main/favicon.ico"/>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<script src="https://castjs.io/cast.min.js"></script>
+    
+      </head>
+
+  <div class="center">
+    <button id="cast">📢 RICKROLL 'EM</button>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" step="0.001" max="1" value=".2" class="slider" id="myRange">
+      <h1>VOLUME</h1>
+      <p>Value: <span id="demo"></span></p>
+    </div>
+    <button id="pause">🤐 GAG RICK</button>
+    <br>
+    <button id="resume">😀 UNGAG RICK</button>
+    <br>
+    <button id="spare">😵 KILL RICK</button>
+
+  </div>
    <script>
       // Create new Castjs instance
 const cjs = new Castjs();
